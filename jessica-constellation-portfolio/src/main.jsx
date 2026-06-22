@@ -113,11 +113,11 @@ function ConstellationArt({ item, compact = false }) {
 
 function Header() {
   return <header className="topbar">
-    <a href="#home" className="logo">jessica <Sparkles size={16} /></a>
+    <a href="#home" className="logo">Jessica Joseph <Sparkles size={16} /></a>
     <nav>
       <a href="#home">home</a><a href="#constellations">constellations</a><a href="#notes">field notes</a><a href="#greenhouse">greenhouse</a><a href="#about">about</a><a href="#contact">contact</a>
     </nav>
-    <a className="ground" href="mailto:jessica@example.com"><Send size={14} /> ground control</a>
+    <a className="ground" href="mailto:Jessica Joseph@example.com"><Send size={14} /> ground control</a>
     <Moon className="moon" />
     <Menu className="menu" />
   </header>;
@@ -127,7 +127,7 @@ function Sidebar() {
   return <aside className="socials">
     <a href="#" aria-label="Github"><GitBranch size={19}/></a>
     <a href="#" aria-label="LinkedIn"><Link size={19}/></a>
-    <a href="mailto:jessica@example.com" aria-label="Email"><Mail size={19}/></a>
+    <a href="mailto:Jessica Joseph@example.com" aria-label="Email"><Mail size={19}/></a>
   </aside>;
 }
 
@@ -155,7 +155,7 @@ function ConstellationsSection() {
   const [active, setActive] = useState(constellations[0]);
   return <section id="constellations" className="section two-col">
     <div className="side-nav glass">
-      <a className="logo mini">jessica <Sparkles size={14}/></a>
+      <a className="logo mini">Jessica Joseph <Sparkles size={14}/></a>
       {[[Home,'home'],[Sparkles,'constellations'],[BookOpen,'field notes'],[Sprout,'greenhouse'],[User,'about'],[Mail,'contact']].map(([Icon, text]) => <a key={text}><Icon size={16}/>{text}</a>)}
       <div className="observing"><span className="planet">♄</span><small>currently observing<br/><b>something amazing</b></small></div>
     </div>
@@ -171,7 +171,7 @@ function ConstellationsSection() {
     </div>
     <div className="mobile-card glass">
       <div className="mobile-top"><span>11:11</span><Menu size={17}/></div>
-      <a className="logo mini">jessica <Sparkles size={14}/></a>
+      <a className="logo mini">Jessica Joseph <Sparkles size={14}/></a>
       <h3>good evening,<br/>explorer.</h3>
       <p>the universe is full of hidden signals.</p>
       <div className="dome"><Sprout/><Sparkles/></div>
@@ -213,7 +213,7 @@ function Footer() {
     <div className="girl">☕</div>
     <h2>we are all made of stars, coffee, and curiosity.</h2>
     <p>thank you for visiting my little corner of the universe.</p>
-    <div className="postcard"><b>let's connect</b><span>jessica@example.com</span><div><Link/><GitBranch/><Mail/></div></div>
+    <div className="postcard"><b>let's connect</b><span>Jessica Joseph@example.com</span><div><Link/><GitBranch/><Mail/></div></div>
   </footer>;
 }
 
