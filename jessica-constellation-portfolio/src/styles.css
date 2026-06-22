@@ -877,3 +877,203 @@ main {
     transform: rotate(-2deg);
   }
 }
+
+.hero {
+  min-height: 880px;
+  overflow: hidden;
+  padding-bottom: 90px;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 5;
+  width: min(430px, 100%);
+  margin-top: 145px;
+  margin-left: 82px;
+}
+
+.sky-map {
+  position: absolute;
+  z-index: 3;
+  top: 160px;
+  left: 48%;
+  width: 45%;
+  height: 620px;
+  display: block;
+}
+
+.sky-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, transparent 19%, rgba(160, 190, 255, .35) 19.2%, transparent 19.7%),
+    linear-gradient(35deg, transparent 30%, rgba(160, 190, 255, .3) 30.2%, transparent 30.7%),
+    linear-gradient(150deg, transparent 43%, rgba(160, 190, 255, .28) 43.2%, transparent 43.7%),
+    linear-gradient(60deg, transparent 56%, rgba(160, 190, 255, .35) 56.2%, transparent 56.7%),
+    linear-gradient(130deg, transparent 68%, rgba(160, 190, 255, .25) 68.2%, transparent 68.7%);
+  opacity: .65;
+  filter: drop-shadow(0 0 12px #74a8ff);
+  pointer-events: none;
+}
+
+.sky-node {
+  position: absolute;
+  width: 190px;
+  min-height: 110px;
+  cursor: pointer;
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.sky-node:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 22px #9bbcff);
+}
+
+.sky-node::before {
+  content: "";
+  position: absolute;
+  left: 70px;
+  top: 25px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  box-shadow:
+    0 0 10px white,
+    0 0 24px #8fb6ff,
+    0 0 48px #74a8ff;
+}
+
+.sky-node strong {
+  position: absolute;
+  left: 0;
+  top: 56px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 15px white, 0 0 28px #8fb6ff;
+  white-space: nowrap;
+}
+
+.sky-node span {
+  position: absolute;
+  left: 5px;
+  top: 92px;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #b6c8f5;
+  white-space: nowrap;
+}
+
+.constellation-art {
+  display: none;
+}
+
+.node-0 {
+  left: 10%;
+  top: 5%;
+}
+
+.node-1 {
+  left: 58%;
+  top: 10%;
+}
+
+.node-2 {
+  left: 70%;
+  top: 44%;
+}
+
+.node-3 {
+  left: 36%;
+  top: 72%;
+}
+
+.node-4 {
+  left: 5%;
+  top: 47%;
+}
+
+.hint {
+  position: absolute;
+  left: 39%;
+  top: 39%;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 31px;
+  color: #d6dcf4;
+  transform: rotate(-7deg);
+  z-index: 4;
+  pointer-events: none;
+}
+
+@media (max-width: 1050px) {
+  .hero {
+    min-height: 1150px;
+  }
+
+  .hero-copy {
+    margin: 80px 0 0;
+  }
+
+  .sky-map {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: 640px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: 1180px;
+  }
+
+  .sky-map {
+    height: 680px;
+  }
+
+  .sky-node {
+    width: 155px;
+  }
+
+  .sky-node strong {
+    font-size: 25px;
+  }
+
+  .sky-node span {
+    font-size: 9px;
+  }
+
+  .node-0 {
+    left: 8%;
+    top: 3%;
+  }
+
+  .node-1 {
+    left: 47%;
+    top: 16%;
+  }
+
+  .node-2 {
+    left: 52%;
+    top: 43%;
+  }
+
+  .node-3 {
+    left: 28%;
+    top: 72%;
+  }
+
+  .node-4 {
+    left: 3%;
+    top: 45%;
+  }
+
+  .hint {
+    display: none;
+  }
+}
